@@ -1,0 +1,53 @@
+{
+  "board": {
+    "max_size": 64
+  },
+  "mcts": {
+    "max_children": 218,
+    "c_puct": 1.0,
+    "num_simulations": 1600,
+    "threads_per_block": 256,
+    "max_batch_size": 64
+  },
+  "neural_network": {
+    "max_filename_length": 256
+  },
+  "gat": {
+    "model_config": {
+      "input_features": 128,
+      "hidden_features": 256,
+      "output_features": 64,
+      "num_heads": 4,
+      "num_layers": 3,
+      "num_actions": 64,
+      "max_nodes": 64,
+      "max_edges": 1024,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "dropout": 0.1,
+      "alpha": 0.2,
+      "batch_size": 32,
+      "epochs": 100
+    }
+  },
+  "self_play": {
+    "max_batch_size": 1024,
+    "max_num_games": 10000,
+    "max_game_length": 1000,
+    "terminal_state": -1,
+    "max_filename_length": 256,
+    "config": {
+      "numIters": 100,
+      "numEps": 100,
+      "numGames": 100,
+      "batchSize": 64,
+      "numMCTSSims": 1000,
+      "tempThreshold": 15,
+      "updateThreshold": 0.6,
+      "maxlenOfQueue": 200000,
+      "numItersForTrainExamplesHistory": 20,
+      "arenaCompare": 40,
+      "checkpoint": "checkpoints/"
+    }
+  }
+}
